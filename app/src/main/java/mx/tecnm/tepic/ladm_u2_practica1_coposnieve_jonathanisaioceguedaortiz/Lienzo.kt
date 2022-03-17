@@ -92,7 +92,7 @@ class Lienzo(este:MainActivity):View(este) {
             este.setTitle("Nevada intensa")
         }else if (contador == tiempo){
             Copos = Array<Copo>(Random.nextInt(30, 90), {Copo(15)})
-            contador = 0;
+            contador = 0
             este.setTitle("Nevada ligera")
         }
         moverCopos(piso)
