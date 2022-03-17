@@ -13,6 +13,7 @@ class Lienzo(este:MainActivity):View(este) {
     var este = este
     var Copos = Array<Copo>(50, {Copo(15)})
     var contador = 0
+    var tiempo = 300
 
     override fun onDraw(c: Canvas) {
         super.onDraw(c)
@@ -86,10 +87,10 @@ class Lienzo(este:MainActivity):View(este) {
         p.color = Color.WHITE
         if (contador == 0){
             este.setTitle("Nevada ligera")
-        }else if (contador == 500){
-            Copos = Array<Copo>(Random.nextInt(150, 250), {Copo(30)})
+        }else if (contador == tiempo/2){
+            Copos = Array<Copo>(Random.nextInt(150, 250), {Copo(25)})
             este.setTitle("Nevada intensa")
-        }else if (contador == 1000){
+        }else if (contador == tiempo){
             Copos = Array<Copo>(Random.nextInt(30, 90), {Copo(15)})
             contador = 0;
             este.setTitle("Nevada ligera")
